@@ -60,10 +60,11 @@
             <a href=""><img src="img/icon-logout.svg" alt="Иконка выхода"></a>
           </p>
 
-          <a href="">Мои заказы</a>        
-          <a href="">Личный кабинет</a>
+          <a class="orders" href="">Мои заказы</a>        
+          <a class="profile" href="">Личный кабинет</a>
+
         </div>
-       
+
       </section>
         
       <nav class="main-navigation">
@@ -97,11 +98,9 @@
             </li>
         </ul>
 
-        <div class="title-container">
-            <h1>Перфораторы</h1>
-        </div>
+        <h1 class="page-title">Перфораторы</h1>
         
-        <section class="filter">
+        <section class="main-filter">
           <h2>Фильтр</h2>
           <form action="https://echo.htmlacademy.ru" method="GET">
 
@@ -118,9 +117,9 @@
 
           </section>
 
-          <fieldset class="producers">
+          <fieldset class="filter">
             <legend>Производители:</legend>
-              <ul class="producer-list">
+              <ul class="filter-list">
                   <li>
                     <input type="checkbox" name="bosch" id="filter-bosch" checked>
                     <label for="filter-bosch">bosch</label>
@@ -144,9 +143,9 @@
               </ul>
           </fieldset>
 
-          <fieldset class="supply">
+          <fieldset class="filter">
               <legend>Питание:</legend>
-              <ul class="supply-list">
+              <ul class="filter-list">
                   <li>
                     <input type="radio" name="supply-group" value="battery" id="filter-battery" checked>
                     <label for="filter-battery">Аккумуляторные</label>
@@ -158,7 +157,7 @@
               </ul>
           </fieldset>
 
-          <button type="submit">Показать</button>
+          <button class="submit" type="submit">Показать</button>
 
           </form>
 
@@ -329,11 +328,14 @@
               <li>
                 <a href="">Доставка</a>
               </li>
+              <li>
+                <a href="">Контакты</a>
+              </li>
             </ul>
           
         </div>
 
-        <div class="footer-wrapper>">
+        <div class="footer-submenu">
 
             <p>
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
@@ -362,26 +364,20 @@
               Все права защищены
             </p>
       
-            <ul class="socials">
-                <li>
-                  <a href="">
-                    <img src="img/icon-vk.svg" alt="ВКонтакте">
-                    <p class="visually-hidden">ВКонтакте</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="img/icon-fb.svg" alt="Facebook">
-                    <p class="visually-hidden">Facebook</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <img src="img/icon-insta.svg" alt="Instagram">
-                    <p class="visually-hidden">Instagram</p>
-                  </a>
-                </li>
-              </ul>
+            <div class="share">
+              <a class="social" href="">
+                <img src="img/icon-vk.svg" alt="ВКонтакте">
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
+              <a class="social" href="">
+                <img src="img/icon-fb.svg" alt="Facebook">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+              <a class="social" href="">
+                <img src="img/icon-insta.svg" alt="Instagram">
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </div>
       
             <p class="feedback">
               Обратная связь:
