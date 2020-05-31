@@ -12,14 +12,17 @@
     --green: #518534; 
     --grey: #E5E5E5;
     --dark-green: #367315; 
+    --light-green: #8ED78F; 
     --black-blue: #161D29;
     --special-yellow: #FFBF47;
     --special-blue: #3BBCE3;
-    --special-lilac: #3BBCE3;
+    --special-lilac: #DC91D8; 
     --special-greenlight: #8ED78F;
     --special-yellowlight: #FFD180;
     --special-green: #5FBB2D;
     --light-orange: #FFBF47;
+    --golden: #FFC047; 
+    --pinky-beige:  #F9F5F0; 
     --rose-red:  #BA2732;
     --dark-blue: #293449;
     --mild-blue: #32425C; 
@@ -207,6 +210,189 @@ img {
     background-color: var(--midnight-blue);
     opacity:  0.5;
 }
+
+/* Promo-section */
+
+.promo-box {
+    width: 300px;
+    height: 123px;
+}
+
+.promo-list {
+    list-style: none;
+}
+.promo-materials {
+    background-color: var(--special-yellow);
+}
+
+.promo-tools {
+    background-color: var(--special-blue);
+}
+
+.promo-devices {
+    background-color: var(--special-lilac);
+}
+
+.promo-discount {
+    background-color: var(--light-green);
+}
+
+.promo-delivery {
+    background-color: var(--golden);
+}
+
+.promo-box h3 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.promo-btn {
+    width: 135px;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    color: var(--white);
+}
+
+.promo-slider {
+    background-color: var(--transparent-black);
+    width: 620px;
+    min-height: 266px;
+}
+
+.promo-slider h3 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.slider-btn {
+    width: 192px;
+    background-color: var(--basic-red);
+    color: var(--white);
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top:11px;
+    padding-bottom: 9px;
+    padding-right: 46px;
+    padding-left: 46px;
+}
+
+/* Popular items section */
+.header-wrapper {
+    width: 940px;
+    background-color: var(--pinky-beige);
+    margin: auto;
+}
+
+.header-wrapper h2 {
+    color: var(--mild-blue);
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.section-btn {
+    background-color: var(--basic-red);
+    color: var(--white);
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    padding-top: 11px;
+    padding-bottom: 9px;
+    padding-right: 39px;
+    padding-left: 38px;
+}
+
+.main-items-list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 70px;
+}
+
+/* Popular brands section */
+
+.brands-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 130px;
+    margin-left: 130px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.brand-item {
+    border: 1px solid var(--light-grey);
+    box-sizing: border-box;
+    width: 220px;
+    height: 145px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.brand-item:hover {
+    box-shadow: 0 0 10px 5px var(--transparent-black);
+}
+
+.brand-item:active {
+   filter: opacity(0.5);
+}
+
+/* Section about service */
+
+.service-section {
+    background-color: var(--basic-background);
+    color: var(--black);
+}
+
+.service-section h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.service-section p {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.service-list {
+    list-style: none;
+}
+
+.service-list li {
+    width: 240px;
+    background-color: var(--mild-blue);
+    box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+    padding-top: 14px;
+    color: var(--white);
+    padding-top: 14px;
+    padding-left: 22px;
+    padding-bottom: 18px;
+}
+
+.service-item h3 {
+    color: var(--mild-blue);
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
 
 /* About company section */
 
@@ -492,6 +678,10 @@ a.social:active {
     border: 1px solid var(--light-grey);
     width: 220px;
     height: 318px;
+}
+
+.item-card:hover {
+    box-shadow: 0 0 10px 5px var(--transparent-black);
 }
 
 .item-card h3 {
