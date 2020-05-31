@@ -23,6 +23,7 @@
     --light-orange: #FFBF47;
     --golden: #FFC047; 
     --pinky-beige:  #F9F5F0; 
+    --light-pink: #F7F3EC; 
     --rose-red:  #BA2732;
     --dark-blue: #293449;
     --mild-blue: #32425C; 
@@ -596,6 +597,8 @@ a.social:active {
     text-decoration: none;
 }
 
+/* Catalog */
+
 .user-name {
     background-color: var(--white);
     color: var(--black);
@@ -626,7 +629,7 @@ a.social:active {
 .page-title {
     width: 940px;
     background-color: var(--light-grayish-blue); 
-    margin:auto;
+    margin-left: 130px;
     color: var(--mild-blue);
     font-family: "Cuprum", Arial, sans-serif;
     font-weight: 400;
@@ -638,6 +641,87 @@ a.social:active {
     padding-bottom: 30px;
 }
 
+.filter-title,
+.grouping-title {
+    color: var(--black);
+    font-family: "PT Sans", Arial, san-serif;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.filter-title {
+    background-color: var(--light-pink);
+    width: 51px;
+    margin-left: 130px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 18px;
+    padding-right: 151px;
+}
+
+.price-title {
+    color: var(--black);
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-left: 130px;
+    margin-bottom: 9px;
+}
+
+.price-range {
+    background-color: var(--light-pink);
+    width: 220px;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 130px;
+}
+
+.price-amount-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-left: 130px;
+
+}
+
+.price-amount {
+    background-color: var(--light-pink);
+    color: var(--black);
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.min-price {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 42px;
+    padding-right: 43px;
+}
+
+.dash {
+    font-family: "PT Sans", Arial, sans-serif;
+    color: var(--black);
+    font-size: 16px;
+    width: 30px;
+    height: 18px;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.max-price {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
 .filter {
     color: var(--black);
     text-transform: uppercase;
@@ -645,6 +729,7 @@ a.social:active {
     border: none;
     font-size: 15px;
     line-height: 19px;
+    margin-left: 130px;
 }
 
 .filter legend {
@@ -668,13 +753,43 @@ a.social:active {
     text-transform: uppercase;
     font-size: 13px;
     line-height: 18px;
+    margin-left: 130px;
 }
 
-.items {
-    font-family: "PT Sans", Arial, sans-serif;
+.grouping {
+    background-color: var(--light-pink);
+    width: 700px;
+    display: flex;
+    margin-top: 20px;
 }
+
+.grouping-list {
+    list-style: none;
+}
+
+.grouping-list a {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: rgb(0%, 0%, 0%, 30%);
+    border-bottom: 1px dotted var(--basic-red);
+}
+
+.grouping-list a:hover {
+    color: var(--black);
+    border-bottom: 1px solid var(--basic-red);
+}
+
+.grouping-list a:active {
+    color: var(--basic-red);
+    border: none;
+}
+
+/* Items section */
 
 .item-card {
+    font-family: "PT Sans", Arial, sans-serif;
     border: 1px solid var(--light-grey);
     width: 220px;
     height: 318px;
@@ -686,7 +801,6 @@ a.social:active {
 
 .item-card h3 {
     color: var(--black);
-    font-family: "PT Sans", Arial, sans-serif;
     font-weight: bold;
     font-size: 18px;
     line-height: 20px;
@@ -739,6 +853,65 @@ a.social:active {
 
 .bookmark-button:hover {
     border: 3px solid var(--mild-blue);
+}
+
+.pagination {
+    list-style: none;
+    display: flex;
+}
+
+.page-number {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--black);
+    border: 1px solid var(--grey);
+    border-radius: 2px;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.page-number:not(.next) {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page-number.next {
+    padding-left: 32px;
+    padding-right: 31px; 
+}
+
+.page-number:hover {
+    border: 1px solid var(--basic-greylight);
+}
+
+.page-number:active {
+    border: 1px solid var(--basic-red);
+}
+
+.tool-information {
+    background-color: var(--basic-background);
+    color: var(--black);
+}
+
+.tool-information h2 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 130px;
+}
+
+.tool-information p {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+    margin-left: 130px;
+    margin-top: 25px;
+    margin-right: 163px;
+    width: 907px;
 }
 
 .form-popup,

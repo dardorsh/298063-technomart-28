@@ -101,19 +101,23 @@
         <h1 class="page-title">Перфораторы</h1>
         
         <section class="main-filter">
-          <h2>Фильтр</h2>
+          <h2 class="filter-title">Фильтр:</h2>
           <form action="https://echo.htmlacademy.ru" method="GET">
 
           <section class="price">
-            <h3>цена:</h3>
+            <h3 class="price-title">цена:</h3>
 
             <div class="price-range">
               <img src="img/filter-button.svg" alt="Кнопка для обозначения ценового диапазона" width="20" height="20">
               <img src="img/filter-button.svg" alt="Кнопка для обозначения ценового диапазона" width="20" height="20">
             </div>
 
-            <p>0</p>
-            <p>30000</p>
+            <ul class="price-amount-list">
+              <li class="price-amount min-price">0</li>
+              <li class="dash"> — </li>
+              <li class="price-amount max-price">30000</li>
+            </ul>
+
 
           </section>
 
@@ -163,16 +167,16 @@
 
         </section>
 
-        <section>
-            <h2>Сортировка:</h2>
-            <ul>
-              <li>
+        <section class="grouping">
+            <h2 class="grouping-title">Сортировка:</h2>
+            <ul class="grouping-list">
+              <li class="grouping-item">
                 <a href="">по цене</a>
               </li>
-              <li>
+              <li class="grouping-item">
                 <a href="">по типу</a>
               </li>
-              <li>
+              <li class="grouping-item">
                 <a href="">по функционалу</a>
               </li>
             </ul>
@@ -279,27 +283,19 @@
               </li>
             </ul>
 
-            <ul class="pagination">
-              <li>
-                <a>1</a>
-              </li>
-              <li>
-                <a href="">2</a>
-              </li>
-              <li>
-                <a href="">3</a>
-              </li>
-              <li>
-                <a href="">Следующая</a>
-              </li>
-            </ul>
+            <div class="pagination">
+              <a class="page-number current">1</a>
+              <a class="page-number" href="">2</a>
+              <a class="page-number" href="">3</a>
+              <a class="page-number next" href="">Следующая</a>
+            </div>
   
         </section>
 
-        <section>
+        <section class="tool-information">
             <h2>пара слов о перфораторах</h2>
             <p>
-              Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. 
+              Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
               Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
               В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
             </p>
