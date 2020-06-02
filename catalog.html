@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Техномарт</title>
@@ -8,14 +8,14 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="catalog-page">
 
     <header class="main-header">
 
       <div class="main-menu">
 
         <a class="header-logo" href="index.html">
-          <img src="img/logo-technomart.svg" alt="Логотип Tecnhomart">
+          <img src="img/logo-technomart.svg" alt="Логотип Tecnhomart" width="108" height="18">
         </a>
   
         <form action="https://echo.htmlacademy.ru" method="GET">
@@ -25,13 +25,13 @@
 
         <ul class="menu-buttons-list">
           <li>
-            <a href="">Закладки:0</a>
+            <a class="menu-button" href="">Закладки:0</a>
           </li>
           <li>
-            <a href="">Корзина:10</a>
+            <a class="menu-button catalog-btn" href="">Корзина:10</a>
           </li>
           <li>
-            <a class="cart-button" href="">Оформить заказ</a>
+            <a class="menu-button cart-button" href="">Оформить заказ</a>
           </li>
         </ul>
 
@@ -56,13 +56,16 @@
             
         <div class="user-profile">
           <p class="user-name">
-            <a href=""><img src="img/icon-user.svg" alt="Иконка профиля">Равшан Джамшутович</a>
+            <a href=""><img src="img/icon-user.svg" alt="Иконка профиля"> 
+              Равшан Джамшутович
+            </a>
             <a href=""><img src="img/icon-logout.svg" alt="Иконка выхода"></a>
           </p>
 
-          <a class="orders" href="">Мои заказы</a>        
-          <a class="profile" href="">Личный кабинет</a>
-
+          <div class="profile-btns">
+            <a href="">Мои заказы</a>        
+            <a href="">Личный кабинет</a>
+          </div>
         </div>
 
       </section>
@@ -171,7 +174,7 @@
             <h2 class="grouping-title">Сортировка:</h2>
             <ul class="grouping-list">
               <li class="grouping-item">
-                <a href="">по цене</a>
+                <a class="current" href="">по цене</a>
               </li>
               <li class="grouping-item">
                 <a href="">по типу</a>
@@ -181,7 +184,7 @@
               </li>
             </ul>
 
-            <ul>
+            <ul class="direction-list">
               <li>
                 <a href=""><img src="img/icon-up-dir.svg" alt="Стрелочка вверх"></a>
               </li>
@@ -283,12 +286,20 @@
               </li>
             </ul>
 
-            <div class="pagination">
-              <a class="page-number current">1</a>
-              <a class="page-number" href="">2</a>
-              <a class="page-number" href="">3</a>
-              <a class="page-number next" href="">Следующая</a>
-            </div>
+            <ul class="pagination">
+              <li>
+                <a class="page-number current">1</a>
+              </li>
+              <li>
+                <a class="page-number" href="">2</a>
+              </li>
+              <li>
+                <a class="page-number" href="">3</a>
+              </li>
+              <li>
+                <a class="page-number next" href="">Следующая</a>
+              </li>
+            </ul>
   
         </section>
 
@@ -308,7 +319,7 @@
         <div class="footer-container">
 
             <a class="footer-logo" href="index.html">
-              <img src="img/logo.png" alt="Логотип Tecnhomart" width="220" height="47">
+              <img src="img/logo-technomart.svg" alt="Логотип Tecnhomart" width="138" height="23">
             </a>
         
             <ul class="footer-navigation">
