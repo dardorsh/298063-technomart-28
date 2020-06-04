@@ -34,8 +34,7 @@
     --transparent-white: rgba(255, 255, 255, 0.5);
     --transparent-root: rgba(0, 0, 0, 0.3);
     --transparent-grey: rgba(197, 197, 197, 0.3); 
-    --transparent-mildgrey: rgba(169, 169, 169, 0.3);
-    --hover-black:  rgba(0, 0, 0, 0.15);  
+    --transparent-mildgrey: rgba(169, 169, 169, 0.3); 
     --blue: #212A3A; 
 }
 
@@ -65,7 +64,8 @@ img {
 
 /* Index */
 
-.page-body {
+.page-body,
+.catalog-page {
     min-height: 100%;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
@@ -85,19 +85,30 @@ img {
     background-color: var(--rose-red);
 }
 
+.index-wrapper {
+    width: 940px;
+    margin: auto;
+    margin-top: 60px;
+}
+
 
 /* Header */
 
 .main-header {
     width: 100%;
     background-color: var(--header-background-color);
+    margin-bottom: 0;
+}
+
+.main-menu-container {
+    background-color: var(--dark-blue);
+    height: 42px;
+    margin-bottom: 42px;
 }
 
 .main-menu {
-    background-color: var(--dark-blue);
-    height: 42px;
-    padding-left: 130px;
-    padding-right: 130px;
+    width: 940px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,6 +123,12 @@ img {
     justify-content: center;
     align-items:center;
 }
+
+.main-menu input {
+    background-color: var(--dark-blue);
+    border: none;
+}
+
 
 .menu-buttons-list {
     display: flex;
@@ -143,7 +160,6 @@ img {
 
 .menu-button.cart-button {
     background: var(--basic-green);
-    margin: 0;
     padding-right: 16px;
     padding-left: 19px;
 }
@@ -158,9 +174,8 @@ img {
 }
 
 .company-information {
-    margin-left: 160px;
-    margin-right: 130px;
-    margin-bottom: 40px;
+    width: 940px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -172,16 +187,18 @@ img {
     line-height: 23px;
     color: var(--basic-red);
     width: 197px;
+    margin-top: 0; 
 }
 
 .company-contacts .container {
-    border: 3px solid var(--white);
     box-sizing: border-box;
     width: 270px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 3px solid var(--white);
+    padding-top: 7px;
+    padding-right: 45px;
+    padding-bottom: 8px;
+    padding-left: 74px;
+    margin-top: 15px;
 }
 
 .phone-number  {
@@ -201,6 +218,7 @@ img {
 .login-buttons {
     display: flex;
     list-style:none;
+    margin-top: 0;
 }
 
 .login-buttons a {
@@ -237,8 +255,9 @@ img {
     background-color: var(--mild-blue);
     box-shadow: inset 0px -5px 0px var(--dark-blue);
     color: var(--white);
-    margin-left: 130px;
-    margin-right: 130px;
+    width: 940px;
+    margin: auto;
+    margin-top: 40px;
     margin-bottom: 60px;
 }
 
@@ -251,6 +270,8 @@ img {
     padding-left: 52px;
     padding-top: 16px;
     padding-bottom: 20px;
+
+    margin: 0;
 }
 
 .site-navigation a {
@@ -270,22 +291,27 @@ img {
 /* Promo-section */
 
 .promo-block {
-    margin-top: 59px;
-    margin-left: 130px;
-    margin-right: 130px;
-}
-
-.promo-box {
-    width: 300px;
-    margin-bottom: 20px;
+    margin: 0;
+    margin-bottom: 59px;
 }
 
 .promo-list {
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 123px 123px 123px;
+    gap: 20px;
+
     padding: 0;
 }
+
+.promo-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 23px;
+}
+
 .promo-materials {
     background-color: var(--special-yellow);
 }
@@ -319,8 +345,10 @@ img {
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
-    padding: 10px 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: var(--white);
+    text-align: center;
 }
 
 .promo-btn:hover {
@@ -333,8 +361,8 @@ img {
 
 .promo-slider {
     background-color: var(--transparent-black);
-    width: 620px;
-    min-height: 266px;
+    grid-column: 1/3;
+    grid-row: 2/-1;
 }
 
 .promo-slider h3 {
@@ -352,12 +380,6 @@ img {
 }
 
 /* Popular items section */
-
-.popular-items,
-.popular-brands {
-    margin-left: 130px;
-    margin-right: 130px;
-}
 
 .header-wrapper {
     background-color: var(--pinky-beige);
@@ -388,15 +410,21 @@ img {
 .main-items-list {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 70px;
+    padding: 0;
 }
 
+.page-body .item-card:last-child {
+    margin-right: 0;
+}
+
+
 /* Popular brands section */
+
 .brands-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
     justify-content: space-between;
+    padding-top: 20px;
 }
 
 .brand-item {
@@ -407,12 +435,11 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
 .brand-item:hover {
-    box-shadow: 0px 4px 20px var(--hover-black);
+    box-shadow: 0px 4px 20px var(--transparent-black);
 }
 
 .brand-item:active {
@@ -508,6 +535,10 @@ img {
 
 .main-contacts p {
     width: 180px;
+}
+
+.main-contacts .to-form {
+    margin-top: 15px;
 }
 
 .more {
@@ -689,10 +720,6 @@ a.social:active {
     background-color: var(--rose-red);
 }
 
-.user-profile {
-    margin-top: 46px;
-}
-
 .user-name {
     background-color: var(--white);
     width: 299px;
@@ -732,6 +759,25 @@ a.social:active {
     color: var(--basic-greylight);
 }
 
+/* Catalog grid */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 220px min-content;
+    grid-template-rows: 24px 89px 38px min-content;
+    gap: 20px;
+    width: 940px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.breadcrumbs {
+    grid-column: 1/-1; 
+    padding: 0;
+
+    margin: 0;
+}
+
 .breadcrumbs li {
     display: inline-block;
 }
@@ -745,9 +791,13 @@ a.social:active {
 }
 
 .page-title {
+    grid-column: 1/-1;
+
+    margin: 0;
+
     width: 940px;
+    box-sizing: border-box;
     background-color: var(--light-grayish-blue); 
-    margin-left: 130px;
     color: var(--mild-blue);
     font-family: "Cuprum", Arial, sans-serif;
     font-weight: 400;
@@ -767,13 +817,13 @@ a.social:active {
     line-height: 18px;
     font-weight: 400;
     text-transform: uppercase;
+
+    margin: 0;
 }
 
 .filter-title {
     background-color: var(--light-pink);
     width: 51px;
-    margin-left: 130px;
-    margin-top: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 18px;
@@ -786,7 +836,6 @@ a.social:active {
     font-size: 17px;
     line-height: 30px;
     text-transform: uppercase;
-    margin-left: 130px;
     margin-bottom: 9px;
 }
 
@@ -797,15 +846,14 @@ a.social:active {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-left: 130px;
 }
 
 .price-amount-list {
     list-style: none;
     display: flex;
     padding: 0;
-    margin-left: 130px;
 
+    margin-bottom: 42px;
 }
 
 .price-amount {
@@ -814,14 +862,15 @@ a.social:active {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 17px;
     line-height: 18px;
+
 }
 
-.min-price {
+/* .min-price {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 42px;
     padding-right: 43px;
-}
+} */
 
 .dash {
     font-family: "PT Sans", Arial, sans-serif;
@@ -833,12 +882,12 @@ a.social:active {
     vertical-align: baseline;
 }
 
-.max-price {
+/* .max-price {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 24px;
     padding-right: 24px;
-}
+} */
 
 .filter {
     color: var(--black);
@@ -847,7 +896,9 @@ a.social:active {
     border: none;
     font-size: 15px;
     line-height: 19px;
-    margin-left: 130px;
+
+    margin: 0;
+    padding: 0;
 }
 
 .filter legend {
@@ -858,6 +909,11 @@ a.social:active {
 
 .filter-list {
     list-style: none;
+    padding: 0;
+}
+
+.filter-list li {
+    margin-bottom: 20px;
 }
 
 .main-filter .submit {
@@ -871,18 +927,33 @@ a.social:active {
     text-transform: uppercase;
     font-size: 13px;
     line-height: 18px;
-    margin-left: 130px;
+    margin-top: 34px;
 }
 
 .grouping {
     background-color: var(--light-pink);
     width: 700px;
     display: flex;
-    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grouping-title {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 140px;
 }
 
 .grouping-list {
     list-style: none;
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 0;
+}
+
+.grouping-item {
+    margin-right: 50px;
 }
 
 .grouping-list a {
@@ -911,14 +982,46 @@ a.social:active {
 
 .direction-list {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Items section */
+
+.items {
+    grid-column: 2/-1;
+}
+
+.items-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
 
 .item-card {
     font-family: "PT Sans", Arial, sans-serif;
     border: 1px solid var(--light-grey);
     width: 220px;
+    min-height: 318px;
+    margin-right: 20px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.item-card img {
+    margin:auto;
+}
+
+
+.catalog-page .item-card:nth-child(3n) {
+    margin-right: 0;
 }
 
 .item-card:hover {
@@ -931,6 +1034,9 @@ a.social:active {
     font-size: 18px;
     line-height: 20px;
     text-align: center;
+
+    padding: 0 30px;
+    margin: 0;
 }
 
 .old-price {
@@ -939,13 +1045,22 @@ a.social:active {
     line-height: 18px;
     text-decoration-line: line-through;
     text-align: center;
+
+    margin: 0;
+    margin-bottom: 13px;
+    padding: 0;
 }
 
 .new-price {
     background-color: var(--basic-red);
+    font-weight: bold;
     width: 141px;
-    height: 38px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
+    border-radius: 5px;
+
+    margin-bottom: 21px;
 }
 
 .buy-button {
@@ -989,6 +1104,9 @@ a.social:active {
 .pagination {
     list-style: none;
     display: flex;
+    padding: 0;
+    margin-top: 48px;
+    margin-left: 0;
 }
 
 .page-number {
@@ -999,9 +1117,12 @@ a.social:active {
     color: var(--black);
     border: 1px solid var(--grey);
     border-radius: 2px;
-    margin-left: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.page-number:not(.current) {
+    margin-left: 10px;
 }
 
 .page-number.current {
