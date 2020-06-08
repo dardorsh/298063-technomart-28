@@ -205,9 +205,15 @@
           
           <div class="container">
           <ul class="service-list">
-            <li>Доставка</li>
-            <li>Гарантия</li>
-            <li>Кредит</li>
+            <li>
+              <a class="checked" href="">Доставка</a>
+            </li>
+            <li>
+              <a href="">Гарантия</a> 
+            </li>
+            <li>
+              <a href="">Кредит</a>
+            </li>
           </ul>
 
           <div class="service-item delivery">
@@ -354,16 +360,13 @@
           </p>
 
           <div class="share">
-            <a class="social" href="">
-              <img src="img/icon-vk.svg" alt="ВКонтакте">
+            <a class="social social-vk" href="">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
-            <a class="social" href="">
-              <img src="img/icon-fb.svg" alt="Facebook">
+            <a class="social social-fb" href="">
               <span class="visually-hidden">Facebook</span>
             </a>
-            <a class="social" href="">
-              <img src="img/icon-insta.svg" alt="Instagram">
+            <a class="social social-inst" href="">
               <span class="visually-hidden">Instagram</span>
             </a>
           </div>
@@ -400,26 +403,28 @@
 
     <div class="form-popup">
       <form action="https://echo.htmlacademy.ru" method="post">
-        <ul class="form-list">
-          <li class="form-name">
+
+        <div class="contacts-container">
+          <p class="form-name">
             <label for="user-name">Ваше имя:</label>
             <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
-          </li>
-          <li class="form-email">
+          </p>
+          <p class="form-email">
             <label for="email-address">Ваш e-mail:</label>
             <input id="email-address" type="email" name="email" placeholder="email@example.com">
-          </li>
-          <li class="form-message">
-            <label for="text-message">Текст письма:</label> <br>
-            <textarea id="text-message" name="message" placeholder="В свободной форме"></textarea>
-          </li>
-        </ul>
-
-        <div class="container">
-          <a href="">Оформить заказ</a>
+          </p>
         </div>
 
-        <button class="visually-hidden" type="button" aria-label="Закрыть"></button>
+          <p class="form-message">
+            <label for="text-message">Текст письма:</label> <br>
+            <textarea id="text-message" name="message" placeholder="В свободной форме"></textarea>
+          </p>
+
+        <div class="button-container">
+          <a href="">Оформить заказ</a>
+          <button class="visually-hidden" type="button" aria-label="Закрыть"></button>
+        </div>
+
       </form>
     </div>
 
