@@ -1355,7 +1355,8 @@ a.social:active {
 .notification-popup .button-container {
     background-color: var(--white-smoke);
     width: inherit;
-    height: 112px;
+    padding-top: 37px;
+    padding-bottom: 37px;
 
     display: flex;
     justify-content: center;
@@ -1379,6 +1380,10 @@ a.social:active {
     background-color: var(--basic-red);
     color: var(--white);
     margin-right: 10px;
+}
+
+.notification-popup a:first-child:active {
+    background-color: var(--rose-red);
 }
 
 .notification-popup a:nth-child(2) {
