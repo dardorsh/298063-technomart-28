@@ -1265,8 +1265,8 @@ a.social:active {
 
     position: fixed;
     left: 50%;
-    top: 10%;
-    transform: translate(-50%);
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .contacts-container {
@@ -1359,8 +1359,8 @@ a.social:active {
     
     position: fixed;
     left: 50%;
-    top: 10%;
-    transform: translate(-50%);
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .notification-popup h2 {
@@ -1416,8 +1416,8 @@ a.social:active {
 
     position: fixed;
     left: 50%;
-    top: 10%;
-    transform: translate(-50%);
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
 
  .visually-hidden {
