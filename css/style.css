@@ -1052,11 +1052,16 @@ a.social:active {
 }
 
 .breadcrumbs a:hover {
-    color: var(--basic-red);
+    color: var(--mild-grey);
+}
+
+.breadcrumbs-current a:hover {
+    color: var(--black);
+    cursor: default;
 }
 
 .breadcrumbs-homepage:hover path {
-    fill: var(--basic-red);
+    fill: var(--mild-grey);
 }
 
 .page-title {
@@ -1152,6 +1157,17 @@ a.social:active {
 
     margin: 0;
     padding: 0;
+
+    position: relative;
+}
+
+.filter::before {
+    content:"";
+    width: 220px;
+    height: 1px;
+    background-color: var(--light-grey);
+    position: absolute;
+    top: -15px;
 }
 
 .filter legend {
@@ -1187,18 +1203,15 @@ a.social:active {
     position: absolute;
     top: -2px;
     left: -35px;
+    opacity: 0.7;
 }
 
 .filter-input-checkbox:checked + label::before {
-    content: "";
-    width: 27px;
-    height: 23px;
     background-image: url(../img/checkbox-on.svg);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    position: absolute;
-    top: -2px;
-    left: -35px;
+}
+
+.filter-checkbox:last-child {
+    margin-bottom: 46px;
 }
 
 .filter-input-radio + label::before {
@@ -1211,19 +1224,18 @@ a.social:active {
     position: absolute;
     top: -3px;
     left: -35px;
+    opacity: 0.8;
 }
 
 .filter-input-radio:checked + label::before {
-    content:"";
-    width: 25px;
-    height: 25px;
     background-image: url(../img/radio-on.svg);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    position: absolute;
-    top: -3px;
-    left: -35px;
 }
+
+.filter-input-checkbox + label:hover::before,
+.filter-input-radio + label:hover::before {
+    opacity: 1;
+}
+
 
 .main-filter .submit {
     background: var(--white);
@@ -1236,7 +1248,7 @@ a.social:active {
     text-transform: uppercase;
     font-size: 13px;
     line-height: 18px;
-    margin-top: 34px;
+    margin-top: 32px;
 }
 
 .grouping {
@@ -1369,13 +1381,28 @@ a.social:active {
 .new-price {
     background-color: var(--basic-red);
     font-weight: bold;
-    width: 141px;
+    width: 120px;
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
     border-radius: 5px;
 
     margin-bottom: 21px;
+
+    position: relative;
+}
+
+.new-price::after {
+    content: "";
+    border: 21px solid transparent;
+    border-left: 21px solid var(--basic-red);
+    display: block;
+    width: 0;
+    height: 0;
+
+    position: absolute;
+    top: 1px;
+    left: 118px;
 }
 
 .label-new {
