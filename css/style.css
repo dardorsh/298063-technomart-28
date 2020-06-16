@@ -1655,6 +1655,7 @@ a.social:active {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .catalog-page .item-card:nth-child(3n) {
@@ -1732,17 +1733,53 @@ a.social:active {
     right: -30px;
 }
 
+.item-buttons {
+    display: block;
+    height: 86px;
+
+    position: absolute;
+    top: 38px;
+    left: 41px;
+}
+
+.item-buttons {
+    display: none;
+}
+
+.item-buttons button {
+    min-width: 135px;
+    min-height: 38px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
 .buy-button {
     background-color: var(--basic-green);
     box-shadow: inset 0px -3px 0px var(--dark-green);
-    border-radius: 2px;
     color: var(--white);
+    padding-left: 25px;
+    margin-bottom: 10px;
+    border: none;
+
+    position: relative;
+}
+
+.buy-button::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/icon-cart.svg);
+    opacity: 0.3;
+
+    position: absolute;
+    left: 30px;
 }
 
 .bookmark-button {
     border: 3px solid var(--basic-green);
-    box-sizing: border-box;
-    border-radius: 2px;
     color: var(--mild-blue);
 }
 
@@ -1768,6 +1805,14 @@ a.social:active {
 .bookmark-button:active {
     border: 3px solid var(--mild-grey);
     color: var(--mild-grey);
+}
+
+.item-card:hover .item-image {
+    display: none;
+}
+
+.item-card:hover .item-buttons {
+    display: block;
 }
 
 .pagination {
