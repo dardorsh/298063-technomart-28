@@ -21,7 +21,8 @@
 
           <form class="main-menu-search-form" action="https://echo.htmlacademy.ru" method="GET">
             <label for="search" class="visually-hidden">Поиск</label>
-            <input class="main-menu-search" id="search" type="search" name="search" placeholder="Поиск:">
+            <input class="main-menu-search" id="search" type="search" name="search" placeholder="Поиск:" >
+            <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
           </form>
 
         
@@ -47,7 +48,7 @@
           <p class="site-description">
            Интернет-магазин 
            строительных материалов 
-           и инструментов для ремонта
+           и&nbsp;инструментов для ремонта
           </p>
 
 
@@ -158,8 +159,8 @@
                 <p class="old-price">32500 Р.</p>
                 <p class="new-price">25500 Р.</p>
                 <div class="item-buttons">
-                  <button type="button" class="buy-button" href="">Купить</a>
-                  <button type="button" class="bookmark-button" href="">В закладки</a>
+                  <button type="button" class="buy-button">Купить</button>
+                  <button type="button" class="bookmark-button">В закладки</button>
                 </div>
               </li>
               <li class="item-card">
@@ -171,8 +172,8 @@
                 <p class="new-price">15500 Р.</p>
                 <span class="label-new">New</span>
                 <div class="item-buttons">
-                  <button type="button" class="buy-button" href="">Купить</a>
-                  <button type="button" class="bookmark-button" href="">В закладки</a>
+                  <button type="button" class="buy-button">Купить</button>
+                  <button type="button" class="bookmark-button">В закладки</button>
                 </div>
               </li>
               <li class="item-card">
@@ -183,8 +184,8 @@
                 <p class="old-price">32500 Р.</p>
                 <p class="new-price">25500 Р.</p>
                 <div class="item-buttons">
-                  <button type="button" class="buy-button" href="">Купить</a>
-                  <button type="button" class="bookmark-button" href="">В закладки</a>
+                  <button type="button" class="buy-button">Купить</button>
+                  <button type="button" class="bookmark-button">В закладки</button>
                 </div>
               </li>
               <li class="item-card item-card-new">
@@ -195,8 +196,8 @@
                 <p class="new-price">12500 Р.</p>
                 <span class="label-new">New</span>
                 <div class="item-buttons">
-                  <button type="button" class="buy-button" href="">Купить</a>
-                  <button type="button" class="bookmark-button" href="">В закладки</a>
+                  <button type="button" class="buy-button">Купить</button>
+                  <button type="button" class="bookmark-button">В закладки</button>
                 </div>
               </li>
             </ul>
@@ -250,8 +251,8 @@
             <h3 class="service-item-title">Доставка</h3>
             <p class="service-info delivery-info">
               Мы с удовольствием доставим ваш товар прямо 
-              к вашему подъезду совершенно бесплатно! <br>
-              Ведь мы неплохо заработаем, <br> 
+              к&nbsp;вашему подъезду совершенно бесплатно! 
+              Ведь&nbsp;мы&nbsp;неплохо заработаем, <br> 
               поднимая его на ваш этаж!
             </p>
           </div>
@@ -259,8 +260,8 @@
           <div class="service-item">
             <h3 class="service-item-title">Гарантия</h3>
             <p class="service-info guarantee-info">
-              Если купленный у нас товар поломается или заискрит, <br>
-              а также в случае пожара, спровоцированного его возгоранием,  
+              Если купленный у нас товар поломается или заискрит,
+              а&nbsp;также в случае пожара, спровоцированного его возгоранием,  
               вы всегда можете быть уверены в нашей гарантии. 
               Мы обменяем сгоревший товар на новый. <br>
               Дом уж восстановите как-нибудь сами.
@@ -315,8 +316,7 @@
           <a class="to-map-btn" href=""> 
             <img src="img/map.png" alt="Карта проезда" width="300" height="158">
           </a> 
-        <!--Переход на сервис карт-->
-        
+                  
           <a class="index-btn to-form" href="">Заблудились? Напишите нам!</a>
 
         </section>
@@ -413,14 +413,13 @@
     </footer>
 
     
-    <div class="notification-popup visually-hidden">
+    <div class="notification-popup">
       <h2>
-        <!--Декоративное изображение-->
         Товар добавлен в корзину
       </h2>
       <a href="">Оформить заказ</a> 
       <a href="catalog.html">Продолжить покупки</a>
-      <button type="button" aria-label="Закрыть"></button>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </div>
 
     <div class="modal-map">
