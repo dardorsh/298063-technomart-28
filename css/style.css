@@ -142,13 +142,17 @@ img {
     width: 271px;
     min-height: 42px;
     margin: 0;
+    padding-left: 43px;
     box-sizing: border-box;
 
     z-index: 1;
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
 .main-menu-search::placeholder {
-    padding-left: 43px;
     color: var(--white);
 }
 
@@ -1739,7 +1743,8 @@ a.social:active {
 }
 
 .item-buttons {
-    display: block;
+    display: flex;
+    flex-direction: column;
     height: 86px;
 
     position: absolute;
@@ -1751,20 +1756,23 @@ a.social:active {
     display: none;
 }
 
-.item-buttons button {
+.item-buttons a {
+    display: block;
     min-width: 135px;
     min-height: 38px;
     border-radius: 2px;
     box-sizing: border-box;
-    outline: none;
     cursor: pointer;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .buy-button {
     background-color: var(--basic-green);
     box-shadow: inset 0px -3px 0px var(--dark-green);
     color: var(--white);
+    padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 25px;
     margin-bottom: 10px;
     border: none;
@@ -1786,6 +1794,8 @@ a.social:active {
 .bookmark-button {
     border: 3px solid var(--basic-green);
     color: var(--mild-blue);
+    padding-top: 9px;
+    padding-bottom: 9px;
 }
 
 .buy-button,
@@ -1817,7 +1827,7 @@ a.social:active {
 }
 
 .item-card:hover .item-buttons {
-    display: block;
+    display: flex;
 }
 
 .pagination {
