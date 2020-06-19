@@ -28,13 +28,13 @@
         
           <ul class="menu-buttons-list">
             <li>
-             <a class="menu-button bookmark" href="">Закладки: 0</a>
+             <a class="menu-button menu-button-bookmark" href="">Закладки: 0</a>
             </li>
             <li>
-              <a  class="menu-button shopping-cart" href="">Корзина: 0</a>
+              <a  class="menu-button menu-button-cart" href="">Корзина: 0</a>
             </li>
             <li>
-              <a class="menu-button order-button" href="">Оформить заказ</a>
+              <a class="menu-button menu-button-order" href="">Оформить заказ</a>
             </li>
           </ul>
 
@@ -61,7 +61,7 @@
         <ul class="login-buttons">
           <li>
             <a class="login-btn" href="">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"/><path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/></svg>
+              <svg class="icon-profile" xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"/><path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/></svg>
               Войти
             </a>
           </li>
@@ -151,7 +151,7 @@
             </div>
 
             <ul class="main-items-list">
-              <li class="item-card">
+              <li class="item-card item-large">
                 <p class="catalog-item-image">
                   <img class="item-image" src="img/item_1_index.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
                 </p>
@@ -180,19 +180,19 @@
                 <p class="catalog-item-image">
                   <img class="item-image" src="img/item_3_index.jpg" alt="Перфоратор BOSCH BFG 9000" width="144" height="128">
                 </p>
-                <h3 class="item-title">Перфоратор BOSCH BFG 9000</h3>
-                <p class="old-price">32500 Р.</p>
+                <h3 class="item-title">Перфоратор BOSCH BFG 6000</h3>
+                <p class="old-price">30500 Р.</p>
                 <p class="new-price">25500 Р.</p>
                 <div class="item-buttons">
                   <a class="buy-button" href="">Купить</a>
                   <a class="bookmark-button" href="">В закладки</a>
                 </div>
               </li>
-              <li class="item-card item-card-new">
+              <li class="item-card item-card-new index-item-card-new">
                 <p class="catalog-item-image">
                   <img class="item-image" src="img/item_4_index.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
                 </p>
-                <h3 class="item-title">Перфоратор BOSCH BFG 9000</h3>
+                <h3 class="item-title">Перфоратор BOSCH BFG 2000</h3>
                 <p class="new-price">12500 Р.</p>
                 <span class="label-new">New</span>
                 <div class="item-buttons">
@@ -249,7 +249,7 @@
 
           <div class="service-item service-item-current">
             <h3 class="service-item-title">Доставка</h3>
-            <p class="service-info delivery-info">
+            <p class="service-item-info delivery-info">
               Мы с удовольствием доставим ваш товар прямо 
               к&nbsp;вашему подъезду совершенно бесплатно! 
               Ведь&nbsp;мы&nbsp;неплохо заработаем, <br> 
@@ -259,7 +259,7 @@
 
           <div class="service-item">
             <h3 class="service-item-title">Гарантия</h3>
-            <p class="service-info guarantee-info">
+            <p class="service-item-info guarantee-info">
               Если купленный у нас товар поломается или заискрит,
               а&nbsp;также в случае пожара, спровоцированного его возгоранием,  
               вы всегда можете быть уверены в нашей гарантии. 
@@ -270,7 +270,7 @@
 
           <div class="service-item">
             <h3 class="service-item-title">Кредит</h3>
-            <p class="service-info credit-info">
+            <p class="service-item-info credit-info">
               Залезть в долговую яму стало проще! <br>
               Кредитные консультанты придут вам на помощь.
             </p>
@@ -292,9 +292,10 @@
           для ремонта и строительства не оставит равнодушными любителей сэкономить на
           гастарбайтерах.
           </p>
-          <p>
+
+          <p class="partner-info">
           Мы можем доставить ваш товар в самые отдаленные точки России!
-          Техномарт работает со многими транспортными компаниями:
+          Техномарт&nbsp;работает со многими транспортными компаниями:
           </p>
           
           <ul class="partners-list">
@@ -303,7 +304,7 @@
             <li>ЖелДорЭкспедиция</li>
           </ul>
 
-          <a class="index-btn more" href="">Подробнее о компании</a>
+          <a class="index-btn more-btn" href="">Подробнее о компании</a>
 
         </section>
 
@@ -317,7 +318,7 @@
             <img src="img/map.png" alt="Карта проезда" width="300" height="158">
           </a> 
                   
-          <a class="index-btn to-form" href="">Заблудились? Напишите нам!</a>
+          <a class="index-btn to-form-btn" href="">Заблудились? Напишите нам!</a>
 
         </section>
     
@@ -356,12 +357,12 @@
 
       <div class="footer-submenu wrapper">
 
-        <p>
+        <p class="footer-submenu-contacts">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
           <a class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
         </p>
 
-        <ul class="nav-items">
+        <ul class="nav-items-list">
           <li>
             <a href="">Материалы</a>
           </li>
@@ -422,7 +423,7 @@
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </div>
 
-    <div class="modal-map">
+    <div class="modal modal-map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651568!2d30.320894615867413!3d59.938794181876276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1591957228333!5m2!1sru!2sru" width="943" height="449" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </div>
