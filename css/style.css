@@ -1864,7 +1864,7 @@ a.social:active {
     position: absolute;
     top: 9px;
     right: -27px;
-    z-index: 20;
+    z-index: 3;
 }
 
 .item-buttons {
@@ -2034,6 +2034,8 @@ a.social:active {
     min-height: 74px;
 }
 
+/* Modal windows */
+
 .form-popup {
     display: none;
 
@@ -2110,21 +2112,24 @@ a.social:active {
 }
 
 
-.form-popup a {
-    background-color: var(--basic-red);
+.form-popup .form-submit {
     width: 460px;
     display: block;
     text-align: center;
     padding-top: 11px;
     padding-bottom: 9px;
 
+    background-color: var(--basic-red);
     color: var(--white);
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
+
+    border: none;
+    cursor: pointer;
 }
 
-.form-popup a:active {
+.form-popup .form-submit:active {
     background-color: var(--rose-red);
 }
 
@@ -2140,6 +2145,8 @@ a.social:active {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+
+    z-index: 4;
 }
 
 .notification-popup h2 {
@@ -2226,24 +2233,77 @@ a.social:active {
     position: absolute;
 }
 
-.modal-close {
-    position: absolute;
-    top: 17px;
-    right: 10px;
-    z-index: 2;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
+.modal-show {
+    display: block;
+    animation: bounce 0.6s;
+}
 
+.modal-close {
     width: 21px;
     height: 21px;
     background-image: url(../img/icon-close.svg);
     background-repeat: no-repeat;
     background-position: 0 0;
+
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    z-index: 2;
+
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    cursor: pointer;
 }
 
- .visually-hidden {
+.modal-error {
+    animation: shake 0.6s;
+}
+
+/* Animations */
+
+ @keyframes bounce {
+    0% {
+      transform: translateY(-2000px) translateX(-50%);
+    }
+  
+    70% {
+      transform: translateY(40px)  translateX(-50%);
+    }
+  
+    90% {
+      transform: translateY(-10px)  translateX(-50%);
+    }
+  
+    100% {
+      transform: translateY(0)  translateX(-50%);
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(-10px);
+    }
+  }
+
+  .visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -2253,4 +2313,3 @@ a.social:active {
     clip: rect(0 0 0 0);
     overflow: hidden;
  }
-

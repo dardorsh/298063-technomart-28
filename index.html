@@ -414,12 +414,12 @@
     </footer>
 
     
-    <div class="notification-popup">
-      <h2>
-        Товар добавлен в корзину
-      </h2>
-      <a href="">Оформить заказ</a> 
-      <a href="catalog.html">Продолжить покупки</a>
+    <div class="modal notification-popup">
+      <h2>Товар добавлен в корзину</h2>
+      <div class="button-container">
+        <a href="">Оформить заказ</a> 
+        <a href="catalog.html">Продолжить покупки</a>
+      </div>
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </div>
 
@@ -429,32 +429,32 @@
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </div>
 
-    <div class="form-popup">
-      <form action="https://echo.htmlacademy.ru" method="post">
+    <div class="modal form-popup">
+      <form class="form-popup-form" action="https://echo.htmlacademy.ru" method="post">
 
         <div class="contacts-container">
           <p class="form-name">
             <label for="user-name">Ваше имя:</label>
-            <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+            <input class="form-user-name" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
           </p>
           <p class="form-email">
             <label for="email-address">Ваш e-mail:</label>
-            <input id="email-address" type="email" name="email" placeholder="email@example.com">
+            <input class="form-user-email" id="email-address" type="email" name="email" placeholder="email@example.com">
           </p>
         </div>
 
           <p class="form-message">
             <label for="text-message">Текст письма:</label> <br>
-            <textarea id="text-message" name="message" placeholder="В свободной форме"></textarea>
+            <textarea id="text-message" name="message" placeholder="В свободной форме" required></textarea>
           </p>
 
         <div class="button-container">
-          <a href="">Оформить заказ</a>
-          <button class="modal-close" type="button" aria-label="Закрыть"></button>
+          <button class="form-submit" type="submit">Оформить заказ</button>
         </div>
-
       </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </div>
 
+    <script src="js/script.js"></script>
   </body>
 </html>
