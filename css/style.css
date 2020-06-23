@@ -2048,6 +2048,8 @@ a.social:active {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+
+    z-index: 4;
 }
 
 .contacts-container {
@@ -2261,6 +2263,17 @@ a.social:active {
     animation: shake 0.6s;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /* Animations */
 
  @keyframes bounce {
@@ -2269,7 +2282,7 @@ a.social:active {
     }
   
     70% {
-      transform: translateY(40px)  translateX(-50%);
+      transform: translateY(20px)  translateX(-50%);
     }
   
     90% {
@@ -2281,10 +2294,10 @@ a.social:active {
     }
   }
 
-  @keyframes shake {
+@-webkit-keyframes shake {
     0%,
     100% {
-      transform: translateX(0);
+      transform: translateY(-50%) translateX(-50%);
     }
   
     10%,
@@ -2292,24 +2305,35 @@ a.social:active {
     50%,
     70%,
     90% {
-      transform: translateX(10px);
-    }
+      transform: translateY(-50%) translateX(-51%);
+}
   
     20%,
     40%,
     60%,
     80% {
-      transform: translateX(-10px);
+      transform: translateY(-50%) translateX(-49%);
     }
-  }
+}
 
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
- }
+@keyframes shake {
+    0%,
+    100% {
+      transform: translateY(-50%) translateX(-50%);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateY(-50%) translateX(-51%);
+}
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateY(-50%) translateX(-49%);
+    }
+}
