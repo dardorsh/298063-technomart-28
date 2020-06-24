@@ -557,19 +557,13 @@ input[type="search"]::-webkit-search-cancel-button {
     background-color: var(--transparent-mildgrey);
 }
 
+/* Slider promo */
+
 .promo-slider {
     grid-column: 1/3;
     grid-row: 2/-1;
 
     position: relative;
-}
-
-.slider-wrapper-1 {
-    background-image: url(../img/slider-1.jpg);
-}
-
-.slider-wrapper-2 {
-    background-image: url(../img/slider-2.jpg);
 }
 
 .slider-list {
@@ -579,17 +573,23 @@ input[type="search"]::-webkit-search-cancel-button {
     display: flex;
 }
 
-.slide {
+.slider-item {
     display: none;
+
+    width: 620px;
+    height: 266px;
 }
 
 .slide-current {
     display: block;
 }
 
-.slider-item {
-    width: 620px;
-    height: 266px;
+.first-slide-item {
+    background-image: url(../img/slider-1.jpg);
+}
+
+.second-slide-item {
+    background-image: url(../img/slider-2.jpg)
 }
 
 .slider-item .container {
@@ -627,6 +627,28 @@ input[type="search"]::-webkit-search-cancel-button {
     text-align: center;
 }
 
+.slider-buttons button {
+    width: 22px;
+    height: 40px;
+    background-image: url(../img/icon-left.svg);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: 122px;
+}
+
+.slider-buttons .button-previous {
+    left: 24px;
+}
+
+.slider-buttons .button-next {
+    transform: rotate(-180deg);
+    right: 20px;
+}
+
 .slider-controls {
     position: absolute;
     bottom: 36px;
@@ -647,35 +669,9 @@ input[type="search"]::-webkit-search-cancel-button {
     cursor: pointer;
 }
 
-.slider-controls .current {
+.slider-controls .current-dot {
     background-color: var(--basic-red);
     border: 2px solid var(--white);
-}
-
-.promo-slider::before {
-    content:"";
-    width: 22px;
-    height: 40px;
-    background-image: url(../img/icon-left.svg);
-    cursor: pointer;
-
-    position: absolute;
-    top: 122px;
-    left: 24px;
-}
-
-.promo-slider::after {
-    content:"";
-    width: 22px;
-    height: 40px;
-    background-image: url(../img/icon-left.svg);
-    transform: rotate(-180deg);
-
-    cursor: pointer;
-
-    position: absolute;
-    top: 122px;
-    right: 20px;
 }
 
 /* Popular items section */
