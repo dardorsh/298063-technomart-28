@@ -1458,11 +1458,12 @@ a.social:active {
     font-weight: bold;
     font-size: 17px;
     line-height: 30px;
+    position: relative;
 }
 
 .price-title {
     margin: 0;
-    margin-bottom: 9px;
+    margin-bottom: 5px;
 }
 
 .range-filter {
@@ -1756,7 +1757,7 @@ a.social:active {
 
 .items {
     grid-column: 2/-1;
-    padding-top: 10px;
+    padding-top: 6px;
 }
 
 .items-list {
