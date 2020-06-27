@@ -587,10 +587,12 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .first-slide-item {
     background-image: url(../img/slider-1.jpg);
+    background-color: var(--transparent-black);
 }
 
 .second-slide-item {
-    background-image: url(../img/slider-2.jpg)
+    background-image: url(../img/slider-2.jpg);
+    background-color: var(--transparent-black);
 }
 
 .slider-item .container {
@@ -1314,12 +1316,11 @@ a.social:active {
     content: "";
     width: 5px;
     height: 5px;
-    background: linear-gradient(0deg, var(--mild-blue), var(--mild-blue)), var(--white);
+    background: linear-gradient(0deg, var(--mild-blue),var(--mild-blue)),var(--white);
     border-radius: 50%;
     position: absolute;
     top: 7px;
     left: 88px;
-
 }
 
 .profile-btns a:hover {
@@ -1336,7 +1337,7 @@ a.social:active {
     display: grid;
     grid-template-columns: 220px -webkit-min-content;
     grid-template-columns: 220px min-content;
-    /* grid-template-rows: 20px 89px 35px -webkit-min-content; */
+    grid-template-rows: 20px 89px -webkit-min-content -webkit-min-content;
     grid-template-rows: 20px 89px min-content min-content;
     gap: 20px;
     margin-top: 20px;
@@ -1553,7 +1554,7 @@ a.social:active {
 
     position: absolute;
     top: 17px;
-    left: -16px;
+    left: -19px;
 }
 
 .filter-list {
@@ -1628,6 +1629,12 @@ a.social:active {
 .filter-input-checkbox + label:hover::before,
 .filter-input-radio + label:hover::before {
     opacity: 1;
+}
+
+.filter-input-checkbox:disabled + label,
+.filter-input-radio:disabled + label {
+    opacity: 0.4;
+    cursor: default;
 }
 
 .filter-item-title:before {
@@ -2087,9 +2094,11 @@ a.social:active {
 .form-name {
     margin-right: 20px;
 }
+
 .form-popup label {
     color: var(--black);
     display: inline-block;
+    vertical-align: middle;
     margin-bottom: 11px;
 }
 
@@ -2280,12 +2289,13 @@ a.social:active {
 }
 
 .modal-error {
-    animation: shake 0.6s;
+    -webkit-animation: shake 0.6s;
+            animation: shake 0.6s;
 }
 
 /* Animations */
 
- @keyframes bounce {
+@-webkit-keyframes bounce {
     0% {
       transform: translateY(-2000px) translateX(-50%);
     }
@@ -2301,7 +2311,25 @@ a.social:active {
     100% {
       transform: translateY(0)  translateX(-50%);
     }
-  }
+}
+
+@keyframes bounce {
+    0% {
+      transform: translateY(-2000px) translateX(-50%);
+    }
+  
+    70% {
+      transform: translateY(20px)  translateX(-50%);
+    }
+  
+    90% {
+      transform: translateY(-10px)  translateX(-50%);
+    }
+  
+    100% {
+      transform: translateY(0)  translateX(-50%);
+    }
+}
 
 @-webkit-keyframes shake {
     0%,
