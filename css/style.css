@@ -32,6 +32,7 @@
     --pinky-red: #CA2C37;
     --bordo: #b52933; 
     --blue: #212A3A; 
+    --lightskyblue: #87cefa; 
     --dark-blue: #293449;
     --mild-blue: #32425C; 
     --midnight-blue: #1D2739; 
@@ -156,11 +157,14 @@ img {
     padding-left: 43px;
     box-sizing: border-box;
 
+    line-height: 24px;
+
     z-index: 1;
 }
 
-input[type="search"]::-webkit-search-cancel-button {
+.main-menu-search::-webkit-search-cancel-button {
     -webkit-appearance: none;
+            appearance: none;
 }
 
 .main-menu-search::placeholder {
@@ -895,6 +899,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .guarantee-info {
     width: 330px;
+    margin-top: 24px;
 }
 
 .guarantee-info::after {
@@ -904,12 +909,13 @@ input[type="search"]::-webkit-search-cancel-button {
     background-image: url(../img/icon-guarantee.png);
 
     position: absolute;
-    bottom: 4px;
+    bottom: 5px;
+    left: 240px;
 }
 
 .credit-info {
     width: 309px;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 
 .credit-info::after {
@@ -919,8 +925,8 @@ input[type="search"]::-webkit-search-cancel-button {
     background-image: url(../img/icon-credit.png);
 
     position: absolute;
-    bottom: 4px;
-    left: 170px;
+    bottom: 2px;
+    left: 164px;
 }
 
 .service-section .index-btn {
@@ -1041,6 +1047,7 @@ input[type="search"]::-webkit-search-cancel-button {
     display: block;
     box-sizing: border-box;
     width: 220px;
+    height: 68px;
     padding-top: 19px;
     padding-bottom: 19px;
     
@@ -1052,11 +1059,15 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .footer-navigation {
     list-style: none;
+    width: 550px;
     margin: 0;
     margin-top: 37px;
-    margin-left: 173px;
+    margin-left: 172px;
     padding: 0;
+
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .footer-navigation li {
@@ -1075,6 +1086,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .footer-submenu {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 36px;
 }
 
@@ -1091,13 +1103,16 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .nav-items-list {
     list-style: none;
+
+    width: 525px;
     margin: 0;
     padding: 0;
     margin-top: 28px;
-    margin-left: 91px;
+    margin-left: 89px;
 
     display: flex;
-
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .nav-items-list li {
@@ -1339,7 +1354,8 @@ a.social:active {
     grid-template-columns: 220px min-content;
     grid-template-rows: 20px 89px -webkit-min-content -webkit-min-content;
     grid-template-rows: 20px 89px min-content min-content;
-    gap: 20px;
+    row-gap: 18px;
+    column-gap: 20px;
     margin-top: 20px;
     margin-bottom: 60px;
 }
@@ -1428,8 +1444,8 @@ a.social:active {
 .filter-title {
     background-color: var(--light-pink);
     width: 51px;
-    padding-top: 9px;
-    padding-bottom: 10px;
+    padding-top: 11px;
+    padding-bottom: 9px;
     padding-left: 18px;
     padding-right: 151px;
 
@@ -1464,7 +1480,7 @@ a.social:active {
 
 .price-title {
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 11px;
 }
 
 .range-filter {
@@ -1619,7 +1635,7 @@ a.social:active {
     position: absolute;
     top: -2px;
     left: -35px;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .filter-input-radio:checked + label::before {
@@ -1627,8 +1643,15 @@ a.social:active {
 }
 
 .filter-input-checkbox + label:hover::before,
-.filter-input-radio + label:hover::before {
+.filter-input-radio + label:hover::before,
+.filter-input-checkbox:focus + label::before,
+.filter-input-radio:focus + label::before {
     opacity: 1;
+}
+
+.filter-input-checkbox:focus + label,
+.filter-input-radio:focus + label {
+    color: var(--basic-red);
 }
 
 .filter-input-checkbox:disabled + label,
@@ -1682,7 +1705,7 @@ a.social:active {
 .grouping-title {
     padding-left: 20px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     margin-right: 140px;
 }
 
@@ -1735,6 +1758,7 @@ a.social:active {
     display: flex;
     justify-content: space-between;
     padding: 0;
+    padding-top: 2px;
     margin: 0;
     margin-right: 14px;
     margin-left: 46px;
@@ -1764,7 +1788,7 @@ a.social:active {
 
 .items {
     grid-column: 2/-1;
-    padding-top: 6px;
+    padding-top: 13px;
 }
 
 .items-list {
@@ -1840,18 +1864,18 @@ a.social:active {
 }
 
 .new-price {
-    align-self: flex-start;
-    margin-left: 44px;
-
     width: 124px;
     min-height: 38px;
     box-sizing: border-box;
-    padding-top: 7px;
-    padding-bottom: 6px;
-    padding-left: 31px;
 
+    margin-left: 44px;
+    padding-top: 10px;
+    padding-left: 31px;
     border-radius: 3px;
     background-color: var(--basic-red);
+
+    font-size: 17px;
+    line-height: 18px;
     font-weight: bold;
 
     position: relative;
@@ -2054,7 +2078,7 @@ a.social:active {
 .tool-information p {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
-    line-height: 25px;
+    line-height: 24px;
     margin: 0;
     width: 907px;
     min-height: 74px;
@@ -2066,6 +2090,8 @@ a.social:active {
     display: none;
 
     width: 620px;
+    min-height: 430px;
+    box-sizing: border-box;
     background-color: var(--white);
     border-top: 7px solid var(--basic-red);
     box-shadow: 0px 4px 20px var(--hover-transparent-black);
@@ -2118,7 +2144,7 @@ a.social:active {
     margin-top: 13px;
     margin-left: 80px;
     margin-right: 80px;
-    margin-bottom: 37px;
+    margin-bottom: 30px;
 }
 
 .form-message textarea {
@@ -2137,15 +2163,19 @@ a.social:active {
 }
 
 .form-popup .button-container {
+    min-height: 112px;
+    margin: 0;
     background-color: var(--white-smoke);
-    padding: 37px 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .form-popup .form-submit {
     width: 460px;
     display: block;
-    text-align: center;
     padding-top: 11px;
     padding-bottom: 9px;
 
@@ -2154,6 +2184,7 @@ a.social:active {
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
+    text-align: center;
 
     border: none;
     cursor: pointer;
@@ -2183,9 +2214,12 @@ a.social:active {
     color: var(--black);
     font-size: 24px;
     line-height: 30px;
-    margin-top: 73px;
-    margin-left: 178px;
-    margin-bottom: 68px;
+
+    box-sizing: border-box;
+    padding-top: 68px;
+    padding-left: 176px;
+    padding-bottom: 70px;
+    margin: 0;
 }
 
 .notification-popup h2::before {
@@ -2197,14 +2231,16 @@ a.social:active {
     background-position: 0 0;
 
     position: absolute;
-    top: 55px;
-    left: 81px;
+    top: 48px;
+    left: 80px;
 }
 
 .notification-popup .button-container {
     background-color: var(--white-smoke);
     width: inherit;
-    padding-top: 37px;
+    box-sizing: border-box;
+    height: 112px;
+    padding-top: 28px;
     padding-bottom: 37px;
 
     display: flex;
@@ -2286,6 +2322,16 @@ a.social:active {
     padding: 0;
 
     cursor: pointer;
+}
+
+.form-popup .modal-close {
+    top: 14px;
+    right: 11px;
+}
+
+.notification-popup .modal-close {
+    top: 12px;
+    right: 10px;
 }
 
 .modal-error {
