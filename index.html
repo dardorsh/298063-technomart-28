@@ -33,6 +33,26 @@
       gtag('config', 'UA-184910103-1');
     </script>
 
+    <!-- ROISTAT -->
+    <script>
+      (function(w, d, s, h, id) {
+        w.roistatProjectId = id; w.roistatHost = h;
+        var p = d.location.protocol == "https:" ? "https://" : "http://";
+        var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init?referrer="+encodeURIComponent(d.location.href);
+        var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+      })(window, document, 'script', 'cloud.roistat.com', 'ef24bc3a1b72d27df77fdad71183711b');
+    </script>
+
+    <!-- BEGIN JIVOSITE INTEGRATION WITH ROISTAT -->
+    <script>
+    (function(w, d, s, h) {
+        w.roistatWithJivoSiteIntegrationWebHook = 'https://cloud.roistat.com/integration/webhook?key=3fbdf4f4fc090c6261934c4767eaff76';
+        var p = d.location.protocol == "https:" ? "https://" : "http://";
+        var u = "/static/marketplace/JivoSite/script.js";
+        var js = d.createElement(s); js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+        })(window, document, 'script', 'cloud.roistat.com');
+    </script>
+    <!-- END JIVOSITE INTEGRATION WITH ROISTAT -->
 
     <script src="//code-ya.jivosite.com/widget/JzwMXc6EGT" async></script>
   </head>
