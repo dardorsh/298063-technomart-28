@@ -55,6 +55,11 @@
     <!-- END JIVOSITE INTEGRATION WITH ROISTAT -->
 
     <script src="//code-ya.jivosite.com/widget/JzwMXc6EGT" async></script>
+    <script> 
+      function jivo_onLoadCallback() {
+        jivo_api.setUserToken(getCookie('roistat_visit'));
+      }
+    </script>
   </head>
 
   <body class="page-body">
