@@ -11,9 +11,8 @@
 	width: 35px;
 	z-index: 300000;
 	cursor: pointer;
-	
+
 	height: 170px;
-	background-image: url(images/jivo_widget_offline.png);
 }
 
 /* when you hover the label should be shifted to the right by 3px */
@@ -24,5 +23,4 @@
 /* if there are operators online - show other label*/
 #jivo_custom_widget.jivo_online{
 	height: 215px;
-	background-image: url(images/jivo_widget_online.png);
 }
