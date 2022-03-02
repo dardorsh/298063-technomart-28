@@ -7,17 +7,17 @@ function jivo_onLoadCallback(){
 	window.jivo_cstm_widget = document.createElement('div');
 	jivo_cstm_widget.setAttribute('id', 'jivo_custom_widget');
 	document.body.appendChild(jivo_cstm_widget);
-	
+
 	// Adds handlers click on the icon - to maximize the window when clicked
 	jivo_cstm_widget.onclick = function(){
 		jivo_api.open();
 	}
-	
+
 	// Change the CSS class if there are agents online
 	if (jivo_config.chat_mode == "online"){
 		jivo_cstm_widget.setAttribute("class", "jivo_online");
 	}
-	
+
 	// Now you can show the user a shortcut
 	window.jivo_cstm_widget.style.display='block';
 }

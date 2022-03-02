@@ -1,7 +1,8 @@
 /* hide the original widget - that there were no two labels on the screen*/
-#jivo_chat_widget{
-	display: none;
-}
+
+#jvlabelWrap, .__jivoMobileButton {
+  display: none !important;
+};
 
 /* the default style - for offline messages if no one is online */
 #jivo_custom_widget{
@@ -13,6 +14,8 @@
 	cursor: pointer;
 
 	height: 170px;
+
+  background-image: url(/jivosite/images/icons8-чат-100.png);
 }
 
 /* when you hover the label should be shifted to the right by 3px */
